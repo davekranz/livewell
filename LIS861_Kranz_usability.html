@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- this meta tag fails to validate but is copied from Bootstrap info so leaving it for now. -->
+        <meta charset="UTF-8">
+
+        <!-- created as a class assignment only; this file neither originated from nor submitted for approval of La Crosse Public Library -->
+        <!-- created by David Kranz as an assignment for UW SLIS course LIS 861, instructor Andromeda Yelton, Spring 2014 -->
+
+        <title>Edible Book Fest at South Community Library, La Crosse, Wis.</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- making use of Bootstrap CSS and CDN -->
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">        
+        <!-- related self-made custom style sheet has changed over time, currently called ediblefest.css -->
+        <link rel="stylesheet" type="text/css" href="ediblefest.css">
+        <!-- link for Google font -->
+        <link href='http://fonts.googleapis.com/css?family=Titillium+Web:600' rel='stylesheet' type='text/css'>
+    </head>
+
+    <body>
+
+        <!-- Super simple page. -->
+        
+
+
+        <div id="non-footer-area"><!-- Need this non-footer div so sticky footer doesn't obscure items at bottom of page. -->
+                                <!-- Also using this non-footer-area div to limit the maximum width, since I had trouble getting the sidebar to do what I wanted. -->
+
+
+            <div class="header1">
+                <!-- header/title area -->
+                <h1>Edible Book Fest</h1>
+                <p class="date-location">April 12, 2014</p><!-- This date is past, do not try to enter fest. -->
+                <p class="date-location">South Community Library</p>
+            </div><!-- end of header1 -->
+
+
+            <div id="sidebar1"><!-- first right (upper) sidebar box -->
+                <img class="hidden-xs" src="http://www.lacrosselibrary.org/userfiles/Edible_Book_Fest_2014.jpg" title="Edible Book Fest logo, date of event Saturday, April 12, 2014." alt="Edible Book Fest logo">
+                <p class="sidebar-caption">Entry forms due April 9.</p>
+            </div><!-- end of right sidebar1 -->
+                    <!-- If I had a PDF of the entry form, I would link to it. -->
+                    <!-- Given more time and some idea of how to save the data, I'd also try to build the form into this page, lower down. It's clear Bootstrap makes this easily possible. -->
+
+            <div id="sidebar2"><!-- second right (lower) sidebar box, schedule of events, with list -->
+                <h3>Schedule of Events</h3>
+                    <ul>
+                        <li>8-9:30 a.m. - Participants drop off edible entries at South Community Library.</li>
+                        <li>9:30-11 a.m. - Judging and photography.</li>
+                        <li>10-1 p.m. - Public voting for Patron's Choice Award.</li>
+                        <li>1:15 pm - Welcome and judges' commentary.</li>
+                    </ul>
+            </div><!-- end of right sidebar2 -->
+
+
+            
+            <div id="main-text-area">
+
+                <div><!-- initial portion of main text (had trouble getting this to play nicely with an image, so omitted image - text wouldn't wrap correctly whether I floated the image or aligned it; tried many ways.) -->
+                    <h2>Play with your food!</h2>
+
+                    <!-- Tried to float image left and even with top line of initial <p> text and with text wrapping normally to image's right, but could not get it to work, settled for this. Used Bootstrap to round corners though it's not particularly evident -->
+                    
+                    <p>Create a book-related dish inspired by a favorite tale, a pun on a book title or in the shape of a book made entirely out of edible materials.</p>
+                    <p>Whether you're a professional chef or just like to play with your food, the festival is open to anyone! It's free to enter, but registration is required by Wednesday, April 9.</p>
+                    <p>Non-perishable food donations will be accepted during the Fest for the WAFER community food shelf.</p>
+                    <p>Don’t want to create an entry? Come and vote for your favorite on Saturday, April 12th, from 10 a.m.–1 p.m.</p>
+                    <p class="details"><span class="details-first-word">Guidelines:</span> Individuals and groups of any size may submit an entry in the festival. Entries must be made from anything that is edible (cake, bread, crackers, Jell-o, fruit, vegetables, candy, etc.) and must be related to books in either shape or theme.</p>
+                    <p class="details"><span class="label label-info">Your edible entry will not be served.</span> Commercially made treats will be served after the announcement of winners.</p>
+                </div>
+                
+                <script>
+                    $('#myPopover').hover('show' () {
+                    var  btn = "this"
+                    btn.button('loading')
+                    $.ajax(...).always(function () {
+                        btn.button('reset')
+                        });
+                    });
+                </script>
+
+                <div><!-- awards, with individual categories, in a media-responsive row thanks to Bootstrap -->
+                    <p class="details"><span class="details-first-word">Awards:</span> Participants will receive a certificate, and prizes will be awarded in the following categories:</p>
+
+                        <div class="row"><!-- start of responsive row class -->
+                            <div class="col-md-4"><p class="categories">Patron's Choice</p></div>
+                            <div class="col-md-4"><p class="categories">Best Pun/Funniest</p></div>
+                            <div class="col-md-4"><p class="categories">Most Creative</p></div>
+                            <div class="col-md-4"><p class="categories">Best Youth</p></div>
+                            <div class="col-md-4"><p class="categories">Best Group</p></div>
+                            <div class="col-md-4"><p class="categories">Best Individual</p></div>
+                            <div class="col-md-4"><p class="categories">Best Visual Presentation</p></div>
+                            <div class="col-md-4"><p class="categories">Best Commercial</p></div>
+                        </div><!-- end of responsive row class -->
+
+                    <p class="details">Entries will be documented, photographed and displayed at South Community Library and on the library's <a class="text-link" href="http://www.flickr.com/photos/lplconnects/sets/72157633289808656/" target="_blank">Flickr</a> and <a class="text-link" href="https://www.facebook.com/lacrosselibrary" target="_blank">Facebook</a> pages.</p>
+                </div><!-- end of awards and categories -->
+
+                <div><!-- contact info -->
+                    <p class="details"><span class="details-first-word">Questions?</span> Contact South Community Library, telephone 608.789.7103.</p>
+                </div><!-- end of contact info -->
+
+            </div><!-- end of main-text-area -->
+
+        </div><!-- end of non-footer-area -->
+
+
+        <div id="footer"><!-- sticky footer area -->
+                <p class="footer1"><a href="http://lacrosselibrary.org/" target="_blank"><img src="http://archives.lacrosselibrary.org/files/8713/6063/6959/LPL-Logo-Color-315x65.png" height="40" title="lacrosselibrary.org" alt="La Crosse Public Library logo." /></a></p>
+        </div><!-- end of sticky footer -->      
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <!-- end of jQuery and JavaScript plugins links -->
+        <script type="text/javascript">
+            $(document).ready(function() {
+            
+            /* Start jQuesry code to make line of text in sidebar disappear and reappear in 2-second intervals. */
+            
+                function changeText() {
+                    if ($(".sidebar-caption").text() == 'Entry forms due April 9.') {
+                    $(".sidebar-caption").text('Enter now!')
+                        
+                    } else {
+                    $(".sidebar-caption").text('Entry forms due April 9.');
+                    }
+                    $(".sidebar-caption").fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
+                }
+                setInterval(changeText, 3000);
+                
+            });
+        </script>
+        
+        
+       
+    </body>
+
+</html>
